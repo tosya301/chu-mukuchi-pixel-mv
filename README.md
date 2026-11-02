@@ -1,4 +1,4 @@
-# Chu♡ 无口萌：用 AI 重做一支像素风 MV
+# chu无口萌MV制作分享
 
 ![三个版本的 Chu 段，从左到右：奶绿、七海、星瞳](制作流程_图/chu_three_versions.gif)
 
