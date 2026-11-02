@@ -1,0 +1,25 @@
+模型：gpt-image-2.5-sunburst（edits 接口，1024x1024，quality=high，一次出 3 张）
+参考图：main_gpt_on_white.png
+入选：S05A_2（一次出 3 张，挑一张）
+
+Reference images:
+- Image 1: the CHARACTER, her deadpan face and the ART STYLE. Keep her identity, her outfit and the exact pixel-art look of this image.
+
+WHO SHE IS (left/right always mean the picture's left/right):
+- Very long periwinkle-lavender hair with deep indigo-purple shadows, reaching past her waist; a few long thin strands drift out to both sides.
+- A single strand of hair on top of her head loops into a heart shape (heart ahoge).
+- One upright cream-white feathered wing ornament on each side of her head, each with a cream five-petal flower and small green leaf sprigs with tiny brown buds at its base.
+- A soft peach-brown streak in her front bangs, running from the top of her head down across the forehead to the inner corner of the picture-RIGHT eye.
+- Teal-blue eyes with a lighter lower half and a thick dark upper lash line, calm and half-lidded.
+- Large rounded peach blush patches on both cheeks, a small peach dot for the nose, a tiny short flat peach line for the mouth.
+- A lavender high choker collar with a white bow and a dark-green oval gem brooch; thin dark-red and white ribbons hang from the brooch over a white lace jabot; small white collar points on both sides; bare shoulders and upper arms.
+- Small cream flower clusters in her hair at shoulder height on both sides.
+
+FACE RULE (deadpan, "mukuchi"): unless the SHOT names one change, her face is as calm as in image 1: half-lidded teal eyes looking at the viewer, eyebrows relaxed and level, the same blush patches, the mouth a tiny short flat line. No smile, no open mouth, no teeth, no tears, no sparkles or hearts in the eyes, no sweat drops, no blush hatching lines, no anime epsilon-shaped mouth, no motion lines.
+
+Framing: a close-up from the top of her head down to her upper chest, her face about a third of the picture width, the same size as a waist-up shot cropped tight. The heart ahoge stays inside the picture; the tips of the wing ornaments may be cut off by the top edge.
+SHOT: front view, head tilted very slightly down, eyes looking up at the viewer. With both hands she lifts one long lock of her own lavender hair from each side of her face and draws the two locks across in front of her face like a veil, so they cover her mouth and chin; the locks cross just below her nose. Her hands stay beside her cheeks, holding the locks loosely between thumb and fingers. Her eyes, eyebrows and blush patches stay fully visible above the hair.
+The ONE change from the FACE RULE: her blush patches are a little larger and one shade deeper peach. Everything visible above the hair is as calm as in image 1: half-lidded eyes looking at the viewer, level eyebrows. She is flustered, but her face refuses to show it. Each hand has exactly four fingers and one thumb.
+
+ART STYLE: exactly the pixel-art look of image 1: chunky square pixels, crisp pixel edges, a small limited palette (periwinkle lavender, deep indigo-purple, cream, peach, teal, olive green, dark red), flat colour fills with checkerboard dithering for the shading, dark indigo pixel outlines. Keep the pixel grid as coarse as in image 1: each pixel block is the same fraction of the whole picture as in image 1. Do not make the pixels finer because she is framed closer. No gradients, no glow, no painterly texture, no 3D.
+BACKGROUND: plain flat pale grey (#E6E6E6), nothing else in the picture: no floor, no shadow, no frame, no text, no watermark.

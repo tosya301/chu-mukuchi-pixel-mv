@@ -1,0 +1,25 @@
+模型：gpt-image-2.5-sunburst（edits 接口，1024x1024，quality=high，一次出 3 张）
+参考图：main_nanami_on_white.png
+入选：S05A_1（一次出 3 张，挑一张）
+
+Reference images:
+- Image 1: the CHARACTER, her deadpan face and the ART STYLE. Keep her identity, her outfit and the exact pixel-art look of this image.
+
+WHO SHE IS (left/right always mean the picture's left/right):
+- Straight warm chestnut-brown hair cut in a bob that reaches just past her chin to the top of her shoulders, with full blunt bangs over her eyebrows and a few longer strands framing both cheeks.
+- A round yellow smiley-face hair clip on a silver hair pin, clipped in her bangs on the picture-RIGHT side.
+- Warm amber-brown eyes with a thick dark-brown upper lash line, calm and half-lidded.
+- Rounded soft peach blush patches on both cheeks, a small peach dot for the nose, a tiny short flat line for the mouth.
+- Big red over-ear headphones resting around her neck, each ear cup red with white and black stripes and a black rim; a thin black cable hangs from the picture-right cup down the front of her hoodie.
+- A white collared shirt with a small red bow tie at the collar.
+- A loose light-grey pullover hoodie; the shark hood lies down behind her neck, its rim lined in red with a row of white triangular shark teeth; each sleeve has a black band with a white stripe running down from the shoulder; two white drawstrings hang down the front.
+- Small round pin badges on the picture-right side of her chest: one red tartan, one yellow, one light blue.
+
+FACE RULE (deadpan, "mukuchi"): unless the SHOT names one change, her face is as calm as in image 1: half-lidded amber-brown eyes looking at the viewer, eyebrows relaxed and level, the same blush patches, the mouth a tiny short flat line. No smile, no open mouth, no teeth, no tears, no sparkles or hearts in the eyes, no sweat drops, no blush hatching lines, no anime epsilon-shaped mouth, no motion lines.
+
+Framing: a close-up from the top of her head down to her upper chest, her face about a third of the picture width, the same size as a waist-up shot cropped tight. The top of her head stays inside the picture.
+SHOT: front view, head tilted very slightly down, eyes looking up at the viewer. Her hoodie sleeves are long and cover her hands up to the fingertips ("sleeve paws"). She holds both sleeve-covered hands together in front of her mouth and chin, so her mouth and chin are hidden behind the grey sleeves with their black-and-white stripes; only a few fingertips peek out of the cuffs. Her eyes, eyebrows and blush patches stay fully visible above the sleeves.
+The ONE change from the FACE RULE: her blush patches are a little larger and one shade deeper peach. Everything visible above the sleeves is as calm as in image 1: half-lidded eyes looking at the viewer, level eyebrows. She is flustered, but her face refuses to show it.
+
+ART STYLE: exactly the pixel-art look of image 1: chunky square pixels, crisp pixel edges, a small limited palette (chestnut brown, light grey, black, white, red, amber, peach), flat colour fills with checkerboard dithering for the shading, dark brown-grey pixel outlines. Keep the pixel grid as coarse as in image 1: each pixel block is the same fraction of the whole picture as in image 1. Do not make the pixels finer because she is framed closer. No gradients, no glow, no painterly texture, no 3D.
+BACKGROUND: plain flat pale grey (#E6E6E6), nothing else in the picture: no floor, no shadow, no frame, no text, no watermark.

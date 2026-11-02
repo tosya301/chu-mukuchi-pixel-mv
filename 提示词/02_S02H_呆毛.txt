@@ -1,0 +1,25 @@
+模型：gpt-image-2.5-sunburst（edits 接口，1024x1024，quality=high，一次出 3 张）
+参考图：main_gpt_on_white.png
+入选：S02H_2（一次出 3 张，挑一张）
+
+Reference images:
+- Image 1: the CHARACTER, her deadpan face and the ART STYLE. Keep her identity, her outfit and the exact pixel-art look of this image.
+
+WHO SHE IS (left/right always mean the picture's left/right):
+- Very long periwinkle-lavender hair with deep indigo-purple shadows, reaching past her waist; a few long thin strands drift out to both sides.
+- A single strand of hair on top of her head loops into a heart shape (heart ahoge).
+- One upright cream-white feathered wing ornament on each side of her head, each with a cream five-petal flower and small green leaf sprigs with tiny brown buds at its base.
+- A soft peach-brown streak in her front bangs, running from the top of her head down across the forehead to the inner corner of the picture-RIGHT eye.
+- Teal-blue eyes with a lighter lower half and a thick dark upper lash line, calm and half-lidded.
+- Large rounded peach blush patches on both cheeks, a small peach dot for the nose, a tiny short flat peach line for the mouth.
+- A lavender high choker collar with a white bow and a dark-green oval gem brooch; thin dark-red and white ribbons hang from the brooch over a white lace jabot; small white collar points on both sides; bare shoulders and upper arms.
+- Small cream flower clusters in her hair at shoulder height on both sides.
+
+FACE RULE (deadpan, "mukuchi"): unless the SHOT names one change, her face is as calm as in image 1: half-lidded teal eyes looking at the viewer, eyebrows relaxed and level, the same blush patches, the mouth a tiny short flat line. No smile, no open mouth, no teeth, no tears, no sparkles or hearts in the eyes, no sweat drops, no blush hatching lines, no anime epsilon-shaped mouth, no motion lines.
+
+Framing: a close-up from just above the tip of the heart ahoge down to her chin, her face about half the picture width, centred; the wing ornaments are cut off by the picture's sides.
+SHOT: front view. Her heart-shaped ahoge stands straight up from the top of her head, perky and slightly larger than in image 1, a clean closed heart outline with plain background inside it, clearly separated from the rest of her hair.
+FACE RULE with no change: completely deadpan, half-lidded eyes looking at the viewer, as if she has no idea what her hair is doing.
+
+ART STYLE: exactly the pixel-art look of image 1: chunky square pixels, crisp pixel edges, a small limited palette (periwinkle lavender, deep indigo-purple, cream, peach, teal, olive green, dark red), flat colour fills with checkerboard dithering for the shading, dark indigo pixel outlines. Keep the pixel grid as coarse as in image 1: each pixel block is the same fraction of the whole picture as in image 1. Do not make the pixels finer because she is framed closer. No gradients, no glow, no painterly texture, no 3D.
+BACKGROUND: plain flat pale grey (#E6E6E6), nothing else in the picture: no floor, no shadow, no frame, no text, no watermark.

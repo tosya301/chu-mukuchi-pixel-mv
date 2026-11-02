@@ -1,0 +1,22 @@
+模型：gpt-image-2.5-sunburst（edits 接口，1024x1024，quality=high，一次出 3 张）
+参考图：main_nanami_on_white.png
+入选：S04P_1（一次出 3 张，挑一张）
+
+Reference images:
+- Image 1: the CHARACTER, her deadpan face and the ART STYLE. Keep her identity, her outfit and the exact pixel-art look of this image.
+
+WHO SHE IS (left/right always mean the picture's left/right):
+- Straight warm chestnut-brown hair cut in a bob that reaches just past her chin to the top of her shoulders, with full blunt bangs over her eyebrows and a few longer strands framing both cheeks.
+- A round yellow smiley-face hair clip on a silver hair pin, clipped in her bangs on the picture-RIGHT side.
+- Warm amber-brown eyes with a thick dark-brown upper lash line, calm and half-lidded.
+- Rounded soft peach blush patches on both cheeks, a small peach dot for the nose, a tiny short flat line for the mouth.
+- Big red over-ear headphones resting around her neck, each ear cup red with white and black stripes and a black rim; a thin black cable hangs from the picture-right cup down the front of her hoodie.
+- A white collared shirt with a small red bow tie at the collar.
+- A loose light-grey pullover hoodie; the shark hood lies down behind her neck, its rim lined in red with a row of white triangular shark teeth; each sleeve has a black band with a white stripe running down from the shoulder; two white drawstrings hang down the front.
+- Small round pin badges on the picture-right side of her chest: one red tartan, one yellow, one light blue.
+
+Framing: the top edge of the picture cuts straight across her neck just below the chin, so her face is NOT in the picture at all; the bottom edge is at her waist. The red headphones around her neck sit at the top edge of the picture, and the ends of her brown hair may just show at the top corners.
+SHOT: front view. Both hands are raised in front of her chest just below the headphones; the tips of her two index fingers touch each other, pointing inward, in a shy fidgeting "finger poke" gesture; the other fingers are loosely curled and the thumbs relaxed, elbows close to her sides. Each hand has exactly four fingers and one thumb.
+
+ART STYLE: exactly the pixel-art look of image 1: chunky square pixels, crisp pixel edges, a small limited palette (chestnut brown, light grey, black, white, red, amber, peach), flat colour fills with checkerboard dithering for the shading, dark brown-grey pixel outlines. Keep the pixel grid as coarse as in image 1: each pixel block is the same fraction of the whole picture as in image 1. Do not make the pixels finer because she is framed closer. No gradients, no glow, no painterly texture, no 3D.
+BACKGROUND: plain flat pale grey (#E6E6E6), nothing else in the picture: no floor, no shadow, no frame, no text, no watermark.

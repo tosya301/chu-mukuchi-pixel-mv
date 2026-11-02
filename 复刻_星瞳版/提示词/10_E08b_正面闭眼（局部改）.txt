@@ -1,0 +1,6 @@
+模型：gpt-image-2.5-sunburst（edits 接口，1024x1024，quality=high，一次出 3 张）
+参考图：main_xingtong_on_white.png
+遮罩：E08b_mask.png（只重画遮罩里的眼睛，其余原样）
+入选：E08b_2（一次出 3 张，挑一张）
+
+Change ONLY the eyes; this is a pixel-art image and the pixel size must stay exactly the same. Both eyes are now closed: each eye becomes a short, gently downward-curved line of dark grey-navy pixels lying where the upper lash line was, about as wide as the open eye was. No iris, no white, no lashes sticking out, no tears. The bangs crossing the eyes, the blush patches, the face outline and everything outside the eyes stay exactly as they are.

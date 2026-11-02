@@ -1,0 +1,21 @@
+模型：gpt-image-2.5-sunburst（edits 接口，1024x1024，quality=high，一次出 3 张）
+参考图：main_xingtong_on_white.png
+入选：S04P_2（一次出 3 张，挑一张）
+
+Reference images:
+- Image 1: the CHARACTER, her deadpan face and the ART STYLE. Keep her identity, her outfit and the exact pixel-art look of this image.
+
+WHO SHE IS (left/right always mean the picture's left/right):
+- Short silver-white bob hair with pale blue-grey shading, straight blunt bangs, ending around her jaw.
+- A soft white bunny hood: the hood has its own little face on the front above her bangs (two small black dot eyes and two pink blush ovals), a single small grey ahoge curl pokes out of the top of the hood, and two long floppy white bunny ears with pink insides hang down on both sides of her head to below her shoulders.
+- Bright blue eyes with a lighter lower half and a thick dark upper lash line, calm and half-lidded.
+- Rounded soft peach blush patches on both cheeks, a small peach dot for the nose, a tiny short flat line for the mouth.
+- A thin white layered choker necklace; her shoulders are bare.
+- An oversized off-shoulder white-grey hoodie with tiny white star prints and big puffy sleeves, a pink ribbon bow tied around each upper arm; two white fluffy pom-poms on strings hang at both sides of her neck.
+- A pink bow with a tiny white bunny charm at her chest on the picture-RIGHT side.
+
+Framing: the top edge of the picture cuts straight across her neck just below the chin, so her face is NOT in the picture at all; the bottom edge is at her waist. Her choker sits just below the top edge; the two pom-poms and the ends of the bunny ears hang down at both sides.
+SHOT: front view. Both hands are raised in front of her chest just below the choker; the tips of her two index fingers touch each other, pointing inward, in a shy fidgeting "finger poke" gesture; the other fingers are loosely curled and the thumbs relaxed, elbows close to her sides. The yellow star plush from image 1 is NOT in this picture; her hands are free. Each hand has exactly four fingers and one thumb.
+
+ART STYLE: exactly the pixel-art look of image 1: chunky square pixels, crisp pixel edges, a small limited palette (silver white, pale blue-grey, grey, pink, blue, peach), flat colour fills with checkerboard dithering for the shading, dark grey-navy pixel outlines. Keep the pixel grid as coarse as in image 1: each pixel block is the same size as in image 1, about 4 pixels of this 1024-pixel picture. Do not make the pixels finer because she is framed closer. No gradients, no glow, no painterly texture, no 3D.
+BACKGROUND: plain flat mint green (#4CC870), nothing else in the picture: no floor, no shadow, no frame, no text, no watermark. Do not let the green tint her hair, her hood, her clothes or her skin.

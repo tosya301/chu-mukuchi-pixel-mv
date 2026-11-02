@@ -1,0 +1,24 @@
+模型：gpt-image-2.5-sunburst（edits 接口，1024x1024，quality=high，一次出 3 张）
+参考图：main_gpt_on_white.png
+入选：S07_1（一次出 3 张，挑一张）
+
+Reference image:
+- Image 1: the CHARACTER and the ART STYLE. Keep her identity, her outfit and the exact pixel-art look of this image.
+
+WHO SHE IS (left/right always mean the picture's left/right):
+- Very long periwinkle-lavender hair with deep indigo-purple shadows, reaching past her waist; a few long thin strands drift out to both sides.
+- A single strand of hair on top of her head loops into a heart shape (heart ahoge).
+- One upright cream-white feathered wing ornament on each side of her head, each with a cream five-petal flower and small green leaf sprigs with tiny brown buds at its base.
+- A soft peach-brown streak in her front bangs, running from the top of her head down across the forehead to the inner corner of the picture-RIGHT eye.
+- Teal-blue eyes with a lighter lower half and a thick dark upper lash line, calm and half-lidded.
+- Large rounded peach blush patches on both cheeks, a small peach dot for the nose, a tiny short flat peach line for the mouth.
+- A lavender high choker collar with a white bow and a dark-green oval gem brooch; thin dark-red and white ribbons hang from the brooch over a white lace jabot; small white collar points on both sides; bare shoulders and upper arms.
+- Small cream flower clusters in her hair at shoulder height on both sides.
+
+FACE RULE (deadpan, "mukuchi"): unless the SHOT names one change, her face is exactly as in image 1: calm half-lidded teal eyes looking at the viewer, eyebrows relaxed and level, the same blush patches, the mouth a tiny short flat line. No smile, no open mouth, no teeth, no tears, no sparkles or hearts in the eyes, no sweat drops, no blush hatching lines, no anime epsilon-shaped mouth, no motion lines.
+
+SHOT: waist-up, body turned three-quarters toward the picture-LEFT, head tilted toward the picture-LEFT shoulder by about 15 degrees, looking at the viewer. One hand rests loosely on her chest just below the brooch.
+The ONE change from the FACE RULE: her mouth is a small round pucker for a kiss ("chu"): a tiny rounded "o" about twice as tall as her usual flat line, drawn in darker peach pixels, clearly different from her usual mouth even at thumbnail size. The lips are NOT pushed forward, NOT epsilon- or 3-shaped, NOT duck lips. Eyes and eyebrows stay exactly as in image 1. Each hand has exactly four fingers and one thumb.
+
+ART STYLE: exactly the pixel-art look of image 1: chunky square pixels of the SAME size as in image 1, crisp pixel edges, a small limited palette (periwinkle lavender, deep indigo-purple, cream, peach, teal, olive green, dark red), flat colour fills with checkerboard dithering for the shading, dark indigo pixel outlines. Keep the framing of image 1 (waist-up, the heart ahoge just below the top edge, her face the same size in the frame) so the pixels come out the same size. No gradients, no glow, no painterly texture, no 3D.
+BACKGROUND: plain flat pale grey (#E6E6E6), nothing else in the picture: no floor, no shadow, no frame, no text, no watermark.

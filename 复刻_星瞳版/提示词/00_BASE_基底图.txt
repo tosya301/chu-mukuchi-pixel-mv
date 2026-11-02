@@ -1,0 +1,26 @@
+模型：gpt-image-2.5-sunburst（edits 接口，1024x1024，quality=high，一次出 3 张）
+参考图：xingtong_bunny.png、naiLv_B_on_white.png
+入选：BASE_2（一次出 3 张，挑一张）
+说明：星星玩偶眼睛里的三颗白点是出图后用代码补的（代码/star_eyes.py），不是提示词出的。
+
+Reference images:
+- Image 1: the CHARACTER: her face shape, her hair, the bunny hood, her outfit and the yellow star plush she hugs. In image 1 she smiles softly: do NOT copy that expression. Ignore the pale lettering in the background.
+- Image 2: ART STYLE, PIXEL SIZE, FRAMING and FACE reference only: a different girl drawn as pixel art. Draw our character in exactly the pixel-art technique of image 2, framed the same way and with the same calm deadpan face, but do NOT copy the girl in image 2: not her lavender hair, her heart-shaped ahoge, her wing ornaments, her flowers, her choker, her dress or her teal eyes.
+
+WHO SHE IS (left/right always mean the picture's left/right):
+- Short silver-white bob hair with pale blue-grey shading, straight blunt bangs, ending around her jaw.
+- She wears a soft white bunny hood: the hood has its own little face on the front above her bangs (two small black dot eyes and two pink blush ovals), a single small grey ahoge curl pokes out of the top of the hood, and two long floppy white bunny ears with pink insides hang down on both sides of her head to below her shoulders.
+- Bright blue eyes with a lighter lower half and a thick dark upper lash line.
+- A thin white layered choker necklace; her shoulders are bare.
+- An oversized off-shoulder white-grey hoodie with tiny white star prints, big puffy sleeves, and a pink ribbon bow tied around each upper arm; two white fluffy pom-poms on strings hang at both sides of her neck.
+- A pink bow with a tiny white bunny charm at her chest on the picture-RIGHT side.
+- She hugs a big yellow five-pointed star plush against her chest with both hands, fingers loosely interlaced over the front of the star; the star has a sleepy face: two short closed-eye black lines and two pink blush ovals.
+
+FACE RULE (deadpan, "mukuchi"): her face is as calm as the girl in image 2: eyes OPEN, half-lidded, looking straight at the viewer; eyebrows relaxed and level; rounded soft peach blush patches on both cheeks; a small peach dot for the nose; the mouth a tiny short flat line. No smile, no open mouth, no teeth, no closed eyes, no tears, no sparkles or hearts in the eyes, no sweat drops, no blush hatching lines.
+
+POSE and FRAMING: facing the viewer straight-on, standing still, hugging the star plush exactly as in image 1. The same framing as image 2: from a little above the top of the bunny hood down to her waist, her head centred, her face about a fifth of the picture width, the same size as the face in image 2. The ends of the bunny ears may reach the sides of the picture.
+
+PIXEL SIZE (important): the pixel blocks must be as BIG and CHUNKY as in image 2. In image 2 there are only about 30 pixel blocks across the distance between the two eyes; use the same: about 30 blocks between her eyes, about 6 to 8 blocks for the whole height of one eye. Fewer, bigger pixels. Do NOT make the pixels finer or smoother than image 2.
+
+ART STYLE: exactly the pixel-art look of image 2: chunky square pixels, crisp pixel edges, a small limited palette (silver white, pale blue-grey, grey, pink, yellow, blue, peach), flat colour fills with checkerboard dithering for the shading, dark grey-navy pixel outlines. No gradients, no glow, no painterly texture, no anti-aliasing, no 3D.
+BACKGROUND: plain flat mint green (#4CC870), nothing else in the picture: no floor, no shadow, no frame, no text, no watermark. Do not let the green tint her hair, her hood, her clothes or her skin.

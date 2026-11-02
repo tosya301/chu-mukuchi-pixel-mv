@@ -1,0 +1,566 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>奶绿 Chu♡ 无口萌 制作流程</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Noto+Sans+JP:wght@500;900&family=Noto+Sans+SC:wght@400;700;900&display=swap">
+<style>
+/* 版式：制作笔记。单栏正文约 38em，图组放宽到 68rem；顶上一条原片开头那种绿底白心花边；
+   镜头时间轴条当整支片的地图。图一律按像素放大，不糊。 */
+:root {
+  --paper: #ffffff;          /* 片子本身就是白底 */
+  --ink: #1d1b22;            /* 偏紫的黑，和人物描边同一路 */
+  --muted: #67626f;
+  --line: #e6e4ea;           /* 出图用的 #E6E6E6 灰底，带一点紫 */
+  --tint: #f4f3f6;
+  --g1: #46c35a;             /* 片中绿心 G1 */
+  --g2: #7dc95e;             /* 片中绿心 G2 */
+  --g-ink: #22803a;          /* 白底上能读的绿字 */
+  --blush: #eea984;          /* 腮红 = 定稿的嘴色 */
+  --f-body: "Noto Sans SC", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  --f-ja: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", var(--f-body);
+  --f-dot: "DotGothic16", "Osaka-Mono", ui-monospace, monospace;
+  --s1: 4px; --s2: 8px; --s3: 12px; --s4: 16px; --s5: 24px; --s6: 36px; --s7: 56px; --s8: 88px;
+  --text: 38em;
+  --wide: 68rem;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #17161b; --ink: #ecebef; --muted: #a39eab; --line: #2e2c34; --tint: #201f26;
+    --g-ink: #6fd681; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #17161b; --ink: #ecebef; --muted: #a39eab; --line: #2e2c34; --tint: #201f26;
+  --g-ink: #6fd681; color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font: 16px/1.85 var(--f-body);
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+:lang(ja) { font-family: var(--f-ja); }
+img, video { max-width: 100%; display: block; }
+.px { image-rendering: pixelated; }
+a { color: var(--g-ink); }
+:focus-visible { outline: 3px solid var(--g1); outline-offset: 2px; }
+
+/* 原片开头那条：绿底 + 白色像素心 */
+.lace {
+  height: 30px;
+  background-color: var(--g1);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='30' shape-rendering='crispEdges'%3E%3Cpath fill='%23fff' d='M13 9h4v2h-4zM23 9h4v2h-4zM11 11h8v2h-8zM21 11h8v2h-8zM11 13h18v4H11zM13 17h14v2H13zM15 19h10v2H15zM17 21h6v2h-6zM19 23h2v2h-2z'/%3E%3C/svg%3E");
+  background-repeat: repeat-x;
+  background-position: center;
+}
+.lace.alt { background-color: var(--g2); }
+
+.wrap {
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+.col { max-width: var(--text); margin-inline: auto; }
+.wide { max-width: var(--wide); margin-inline: auto; }
+
+header.top { padding-block: var(--s7) var(--s6); display: grid; gap: var(--s5); }
+.eyebrow {
+  font: 15px/1.4 var(--f-dot);
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  margin: 0;
+}
+h1 { margin: 0; line-height: 0; }
+h1 img { width: min(100%, 696px); height: auto; }
+.dek { font-size: 19px; line-height: 1.8; margin: 0; max-width: 32em; text-wrap: pretty; }
+
+.facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(9.5rem, 1fr));
+  gap: var(--s4) var(--s5);
+  margin: 0;
+  padding-block: var(--s4);
+  border-block: 1px solid var(--line);
+}
+.facts div { min-width: 0; }
+.facts dt { font-size: 13px; color: var(--muted); }
+.facts dd { margin: 0; font: 20px/1.4 var(--f-dot); font-variant-numeric: tabular-nums; }
+.facts dd small { font: 13px/1.4 var(--f-body); color: var(--muted); display: block; }
+
+.film { padding-block: var(--s5) var(--s7); }
+.film video { width: 100%; aspect-ratio: 4 / 3; background: var(--tint); border: 1px solid var(--line); }
+.cap { font-size: 13.5px; line-height: 1.7; color: var(--muted); margin: var(--s2) 0 0; }
+
+section { padding-block: var(--s7); border-top: 1px solid var(--line); }
+.step {
+  display: flex; align-items: baseline; gap: var(--s3);
+  font: 15px/1 var(--f-dot); color: var(--g-ink); margin: 0 0 var(--s3);
+}
+h2 { font-size: 30px; line-height: 1.35; font-weight: 900; margin: 0 0 var(--s5); text-wrap: balance; letter-spacing: 0.01em; }
+h3 { font-size: 18px; line-height: 1.5; font-weight: 700; margin: var(--s6) 0 var(--s2); }
+p { margin: 0 0 var(--s4); text-wrap: pretty; }
+ul, ol { margin: 0 0 var(--s4); padding-left: 1.3em; }
+li { margin-bottom: var(--s2); }
+li::marker { color: var(--muted); }
+strong { font-weight: 700; }
+code, .mono { font: 0.92em/1.4 var(--f-dot); }
+
+.tools { display: grid; gap: 0; margin: 0; }
+.tools > div {
+  display: grid; grid-template-columns: 7.5em 1fr; gap: var(--s4);
+  padding-block: var(--s3); border-bottom: 1px solid var(--line);
+}
+.tools > div:first-child { border-top: 1px solid var(--line); }
+.tools dt { font-weight: 700; }
+.tools dd { margin: 0; min-width: 0; }
+
+.lesson {
+  margin: var(--s5) 0 0;
+  padding: var(--s4) var(--s5);
+  background: var(--tint);
+  border-left: 4px solid var(--g1);
+}
+.lesson p:last-child { margin-bottom: 0; }
+
+/* 整支片的地图：宽度按帧数 */
+.map { margin: var(--s5) 0 var(--s2); }
+.bar { display: flex; height: 34px; gap: 2px; }
+.bar span { min-width: 2px; background: var(--g2); position: relative; }
+.bar span.chu { background: var(--g1); }
+.bar span.card { background: var(--line); }
+.ticks { display: flex; justify-content: space-between; font: 12px/1 var(--f-dot); color: var(--muted); margin-top: var(--s2); }
+.legend { display: flex; flex-wrap: wrap; gap: var(--s2) var(--s5); font-size: 13px; color: var(--muted); margin-top: var(--s3); }
+.legend i { display: inline-block; width: 12px; height: 12px; margin-right: 6px; vertical-align: -1px; background: var(--g2); }
+.legend i.chu { background: var(--g1); }
+.legend i.card { background: var(--line); }
+
+.scroll { overflow-x: auto; margin: var(--s5) 0; }
+table { border-collapse: collapse; width: 100%; min-width: 40rem; font-size: 14.5px; line-height: 1.6; }
+th, td { text-align: left; vertical-align: top; padding: var(--s2) var(--s3) var(--s2) 0; border-bottom: 1px solid var(--line); }
+th { font-weight: 700; font-size: 13px; color: var(--muted); }
+td.t { font: 13px/1.6 var(--f-dot); white-space: nowrap; font-variant-numeric: tabular-nums; color: var(--muted); }
+td.ly { font-weight: 500; white-space: nowrap; }
+td.n { font: 13px/1.6 var(--f-dot); color: var(--g-ink); }
+
+/* 成片抽帧 */
+.frames { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--s4); margin: var(--s5) 0 0; }
+@media (max-width: 900px) { .frames { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .frames { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s3); } }
+.frames figure { margin: 0; min-width: 0; }
+.frames img { width: 100%; height: auto; aspect-ratio: 4 / 3; border: 1px solid var(--line); }
+.frames figcaption { font-size: 13px; line-height: 1.5; color: var(--muted); margin-top: var(--s1); }
+.frames figcaption b { font: 12px/1 var(--f-dot); color: var(--ink); font-weight: 400; margin-right: 6px; }
+
+figure { margin: var(--s5) 0; }
+.pair { display: grid; grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); gap: var(--s4); align-items: start; }
+.pair figure { margin: 0; min-width: 0; }
+.pair img { width: 100%; height: auto; border: 1px solid var(--line); background: var(--tint); }
+figcaption { font-size: 13.5px; line-height: 1.6; color: var(--muted); margin-top: var(--s2); }
+
+.swatches { display: flex; flex-wrap: wrap; gap: var(--s4); margin: var(--s4) 0 var(--s5); }
+.sw { display: flex; align-items: center; gap: var(--s3); font-size: 14px; }
+.sw i { width: 44px; height: 44px; display: block; border: 1px solid var(--line); }
+.sw .mono { color: var(--muted); display: block; font-size: 13px; }
+.checker {
+  background-color: #fff;
+  background-image: conic-gradient(var(--g1) 25%, transparent 0 50%, var(--g1) 0 75%, transparent 0);
+  background-size: 8px 8px;
+}
+.checker.two { background-image: conic-gradient(var(--g2) 25%, transparent 0 50%, var(--g2) 0 75%, transparent 0); }
+
+/* 三选一 */
+.pick { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s3); margin: var(--s5) 0 0; }
+.pick figure { margin: 0; }
+.pick img { width: 100%; height: auto; border: 3px solid transparent; }
+.pick .on img { border-color: var(--g1); }
+.pick figcaption { font: 12.5px/1.4 var(--f-dot); margin-top: var(--s1); }
+.pick .on figcaption { color: var(--g-ink); }
+
+.prompt { list-style: none; padding: 0; margin: var(--s4) 0; counter-reset: p; display: grid; gap: 0; }
+.prompt li { counter-increment: p; display: grid; grid-template-columns: 2.2em 1fr; gap: var(--s2); padding-block: var(--s2); border-bottom: 1px solid var(--line); margin: 0; }
+.prompt li::before { content: counter(p); font: 15px/1.85 var(--f-dot); color: var(--g-ink); }
+.prompt li > span { min-width: 0; }
+
+/* 修图四组 */
+.fixes { display: grid; gap: var(--s6); margin-top: var(--s5); }
+.fix h3 { margin-top: 0; }
+.fix .row { display: flex; flex-wrap: wrap; gap: var(--s3); align-items: flex-end; margin-top: var(--s3); }
+.fix .row figure { margin: 0; min-width: 0; flex: 0 1 auto; }
+.fix .row img { height: auto; border: 1px solid var(--line); }
+.fix .row figcaption { font: 12.5px/1.4 var(--f-dot); margin-top: var(--s1); color: var(--muted); }
+.dropped { color: var(--muted); font-size: 15px; }
+
+.pipe { list-style: none; padding: 0; margin: var(--s5) 0; counter-reset: s; }
+.pipe > li { counter-increment: s; display: grid; grid-template-columns: 2.4em 1fr; gap: var(--s3); padding-block: var(--s3); border-bottom: 1px solid var(--line); margin: 0; }
+.pipe > li::before { content: counter(s, decimal-leading-zero); font: 16px/1.85 var(--f-dot); color: var(--g-ink); }
+.pipe > li > div { min-width: 0; }
+.pipe p { margin: 0; }
+
+.motion { margin: var(--s4) 0 var(--s2); }
+.motion svg { width: 100%; max-width: 380px; height: auto; display: block; }
+.motion .grid line { stroke: var(--line); }
+.motion .lbl { font: 13px var(--f-dot); fill: var(--muted); }
+.motion .dot { fill: var(--g1); }
+.motion .path { stroke: var(--g-ink); fill: none; stroke-width: 2; stroke-dasharray: 4 4; }
+.motion .base { stroke: var(--muted); stroke-width: 1; }
+
+.checks { display: grid; grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr)); gap: var(--s4); margin: var(--s5) 0; }
+.checks div { padding-top: var(--s3); border-top: 3px solid var(--g1); min-width: 0; }
+.checks b { font: 26px/1.2 var(--f-dot); font-weight: 400; display: block; font-variant-numeric: tabular-nums; }
+.checks span { font-size: 14px; color: var(--muted); line-height: 1.6; display: block; margin-top: var(--s1); }
+
+.rounds { list-style: none; padding: 0; margin: var(--s4) 0; }
+.rounds li { display: grid; grid-template-columns: 6.5em 1fr; gap: var(--s4); padding-block: var(--s2); border-bottom: 1px solid var(--line); margin: 0; }
+.rounds li > b { font-size: 14px; line-height: 1.85; font-weight: 700; color: var(--muted); font-variant-numeric: tabular-nums; }
+.rounds li > span { min-width: 0; }
+
+.files { list-style: none; padding: 0; margin: var(--s4) 0; border-top: 1px solid var(--line); }
+.files li { display: grid; grid-template-columns: minmax(0, 15em) minmax(0, 1fr); gap: var(--s4); padding-block: var(--s2); border-bottom: 1px solid var(--line); margin: 0; font-size: 14.5px; line-height: 1.6; }
+.files li > span:first-child { font-weight: 700; overflow-wrap: anywhere; }
+.files li > span:last-child { color: var(--muted); }
+.files li.sub > span:first-child { padding-left: 1.4em; font-weight: 500; }
+@media (max-width: 560px) { .files li { grid-template-columns: 1fr; gap: 0; } }
+.note { font-size: 14px; color: var(--muted); }
+
+footer { padding-block: var(--s6) var(--s7); }
+footer p { font-size: 13.5px; color: var(--muted); margin: 0; }
+
+@media (max-width: 560px) {
+  body { font-size: 15.5px; }
+  h2 { font-size: 25px; }
+  header.top { padding-block: var(--s6) var(--s5); }
+  .dek { font-size: 17px; }
+  .tools > div { grid-template-columns: 1fr; gap: 0; }
+  .rounds li { grid-template-columns: 1fr; gap: 0; }
+  section { padding-block: var(--s6); }
+}
+</style>
+
+<div class="lace" role="presentation"></div>
+
+<header class="top wrap">
+  <div class="wide" style="display:grid;gap:var(--s5);width:100%">
+    <p class="eyebrow">制作流程 · 2026.11.01–11.02</p>
+    <h1><img class="px" src="制作流程_图/title.png" width="696" height="96" alt="奶绿 Chu♡ 无口萌"></h1>
+    <p class="dek">一支 20.5 秒像素风日文歌 MV 的重做。音乐、切点、动作节奏都从原片逐帧量出来照做，人物换成奶绿，表情改成「无口萌」：脸几乎不动，心情全靠小动作露出来。</p>
+    <dl class="facts">
+      <div><dt>时长</dt><dd>20.5 s</dd></div>
+      <div><dt>画幅</dt><dd>1440×1080<small>4:3，和原片一样</small></dd></div>
+      <div><dt>帧率</dt><dd>30 fps<small>画面约 12 fps 换一次</small></dd></div>
+      <div><dt>镜头</dt><dd>11 个</dd></div>
+      <div><dt>出图</dt><dd>48 → 9<small>候选 48 张，进片 9 张</small></dd></div>
+    </dl>
+  </div>
+</header>
+
+<div class="film wrap">
+  <div class="wide">
+    <video controls playsinline preload="metadata" poster="制作流程_图/poster.jpg" src="成片/奶绿Chu无口萌_成片.mp4"></video>
+    <p class="cap">成片。声音是原曲音轨，点开再播放。</p>
+  </div>
+</div>
+
+<section class="wrap" aria-labelledby="h-tools">
+  <div class="col">
+    <h2 id="h-tools">用了什么</h2>
+    <dl class="tools">
+      <div><dt>出图</dt><dd>gpt-image（OpenAI 的图像模型），用接口调用：每次给参考图和一段英文提示词，一次出 3 张。</dd></div>
+      <div><dt>拆片和合成</dt><dd>Claude Code。在终端里让 AI 写 Python 脚本并运行：OpenCV 逐帧测量原片，Pillow 一帧一帧画，ffmpeg 合成视频。</dd></div>
+      <div><dt>音乐</dt><dd>原片的音轨原样拷进成片，不重新编码。</dd></div>
+      <div><dt>歌词字</dt><dd>Noto Sans JP 最粗的一档。先用很小的字号、关掉抗锯齿写出来，再按格子放大，就是片子里那种粗黑像素字。</dd></div>
+      <div><dt>人</dt><dd>定方向、每批挑图、看样片提修改。两天里一共拍板了 30 多条。</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="wrap" aria-labelledby="h-1">
+  <div class="col">
+    <p class="step"><span>STEP 1</span></p>
+    <h2 id="h-1">拆原片：先量，再做</h2>
+    <p>原片导出成 615 张图（30 fps × 20.5 s），然后一帧一帧量出下面这些：</p>
+    <ul>
+      <li><strong>镜头切在哪一帧。</strong>一共 11 个镜头，每个切点精确到帧。</li>
+      <li><strong>像素有多大。</strong>原片是一张约 311×232 的小图放大 3.1 倍。我们出 1440×1080，一个「大像素」约 4.6 px，所有移动都按整格走。</li>
+      <li><strong>画面多久动一次。</strong>视频是 30 fps，画面其实每 2～3 帧才换一次，约 12 fps。像素动画一顿一顿的手感就从这里来。</li>
+      <li><strong>镜头里怎么动。</strong>用 OpenCV 把相邻两帧对齐（ECC 仿射对齐加模板匹配），量出来只有平移，没有缩放，也没有旋转。</li>
+      <li><strong>怎么转场。</strong>新镜头开头 2～3 帧整体往白推 30%，再把每隔一个大像素换成白色，像闪了一下。</li>
+      <li><strong>歌词怎么动。</strong>每句歌词在每一帧里的外框（位置、大小、颜色）都记下来，后面直接套用。</li>
+    </ul>
+    <div class="lesson">
+      <p>一开始动作是凭感觉做的（轻微缩放加随机抖动），看样片就不对：原片的动是慢的，但每一下都很干脆，踩在拍子上。改成逐帧测量后才对上，之后每个动作都是先量再做。</p>
+    </div>
+  </div>
+
+  <div class="wide">
+    <div class="map" role="img" aria-label="11 个镜头在 20.5 秒里的位置，宽度按帧数">
+      <div class="bar">
+        <span style="flex:100" title="1 声を聴くだけで"></span>
+        <span style="flex:28" title="2 幸せ"></span>
+        <span style="flex:25" title="3 幸せ"></span>
+        <span style="flex:12" title="4 な"></span>
+        <span style="flex:13" title="5 なの"></span>
+        <span style="flex:12" title="6 なの!"></span>
+        <span class="card" style="flex:13" title="7 でもでも"></span>
+        <span class="chu" style="flex:100" title="8 Chu"></span>
+        <span style="flex:107" title="9 知らない感情で埋もれそう"></span>
+        <span class="chu" style="flex:100" title="10 Chu"></span>
+        <span style="flex:105" title="11 こんなに臆病だっけ?"></span>
+      </div>
+      <div class="ticks" aria-hidden="true"><span>0 s</span><span>5</span><span>10</span><span>15</span><span>20.5 s</span></div>
+      <div class="legend"><span><i></i>奶绿的镜头</span><span><i class="chu"></i>Chu 段（绿底，一拍一切）</span><span><i class="card"></i>文字卡</span></div>
+    </div>
+
+    <div class="scroll">
+      <table>
+        <thead><tr><th>#</th><th>时间</th><th>歌词</th><th>大意</th><th>奶绿在做什么</th></tr></thead>
+        <tbody>
+          <tr><td class="n">1</td><td class="t">0.0–3.3</td><td class="ly" lang="ja">声を聴くだけで</td><td>光是听到你的声音</td><td>捏着耳机，眼皮半垂。画面从脸慢慢往上摇到头顶</td></tr>
+          <tr><td class="n">2</td><td class="t">3.3–4.3</td><td class="ly" lang="ja">幸せ</td><td>好幸福</td><td>脸不动，心形呆毛竖起来，踩着拍子弹两下</td></tr>
+          <tr><td class="n">3</td><td class="t">4.3–5.1</td><td class="ly" lang="ja">幸せ</td><td>好幸福</td><td>胸前比心，表情还是淡淡的</td></tr>
+          <tr><td class="n">4</td><td class="t">5.1–5.5</td><td class="ly" lang="ja">な</td><td></td><td>眼睛特写</td></tr>
+          <tr><td class="n">5</td><td class="t">5.5–5.9</td><td class="ly" lang="ja">なの</td><td></td><td>不露脸，两根食指在胸前对戳</td></tr>
+          <tr><td class="n">6</td><td class="t">5.9–6.3</td><td class="ly" lang="ja">なの!</td><td>就是嘛！</td><td>长发在鼻子下交叉，把嘴挡住；腮红加深</td></tr>
+          <tr><td class="n">7</td><td class="t">6.3–6.8</td><td class="ly" lang="ja">でもでも</td><td>可是可是</td><td>文字卡</td></tr>
+          <tr><td class="n">8</td><td class="t">6.8–10.1</td><td class="ly">Chu ×8</td><td>亲亲，一拍一声</td><td>左右交替：A 拍歪头无口，B 拍 chu 嘴</td></tr>
+          <tr><td class="n">9</td><td class="t">10.1–13.6</td><td class="ly" lang="ja">知らない感情で埋もれそう</td><td>快被说不清的感情淹没了</td><td>正面，面无表情，偶尔眨眼</td></tr>
+          <tr><td class="n">10</td><td class="t">13.6–17.0</td><td class="ly">Chu ×8</td><td>同上</td><td>同第 8 段</td></tr>
+          <tr><td class="n">11</td><td class="t">17.0–20.5</td><td class="ly" lang="ja">こんなに臆病だっけ?</td><td>我有这么胆小吗？</td><td>食指抵着下巴，嘴角往下撇，眨眼</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="frames">
+      <figure><img src="制作流程_图/shot_s01.jpg" width="960" height="720" alt="镜头 1：捏着耳机，竖排歌词" loading="lazy"><figcaption><b>1</b>捏耳机</figcaption></figure>
+      <figure><img src="制作流程_图/shot_koufuku1.jpg" width="960" height="720" alt="镜头 2：呆毛特写" loading="lazy"><figcaption><b>2</b>呆毛竖起来</figcaption></figure>
+      <figure><img src="制作流程_图/shot_koufuku2.jpg" width="960" height="720" alt="镜头 3：胸前比心" loading="lazy"><figcaption><b>3</b>比心</figcaption></figure>
+      <figure><img src="制作流程_图/shot_na.jpg" width="960" height="720" alt="镜头 4：眼睛特写" loading="lazy"><figcaption><b>4</b>眼睛特写</figcaption></figure>
+      <figure><img src="制作流程_图/shot_nano.jpg" width="960" height="720" alt="镜头 5：食指对戳" loading="lazy"><figcaption><b>5</b>戳手指</figcaption></figure>
+      <figure><img src="制作流程_图/shot_nano_bang.jpg" width="960" height="720" alt="镜头 6：长发挡住嘴" loading="lazy"><figcaption><b>6</b>长发挡嘴</figcaption></figure>
+      <figure><img src="制作流程_图/shot_demo.jpg" width="960" height="720" alt="镜头 7：でもでも 文字卡" loading="lazy"><figcaption><b>7</b>文字卡</figcaption></figure>
+      <figure><img src="制作流程_图/shot_chuA.jpg" width="960" height="720" alt="镜头 8：Chu 段 A 拍，人在左，绿底" loading="lazy"><figcaption><b>8</b>Chu A 拍</figcaption></figure>
+      <figure><img src="制作流程_图/shot_chuB.jpg" width="960" height="720" alt="镜头 8：Chu 段 B 拍，人在右，chu 嘴" loading="lazy"><figcaption><b>8</b>Chu B 拍</figcaption></figure>
+      <figure><img src="制作流程_图/shot_front.jpg" width="960" height="720" alt="镜头 9：正面，绿心背景" loading="lazy"><figcaption><b>9</b>正面</figcaption></figure>
+      <figure><img src="制作流程_图/shot_front_blink.jpg" width="960" height="720" alt="镜头 9：正面，闭眼的那一帧" loading="lazy"><figcaption><b>9</b>眨眼那一帧</figcaption></figure>
+      <figure><img src="制作流程_图/shot_okubyo.jpg" width="960" height="720" alt="镜头 11：食指抵下巴" loading="lazy"><figcaption><b>11</b>胆小吗？</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="wrap" aria-labelledby="h-2">
+  <div class="col">
+    <p class="step"><span>STEP 2</span></p>
+    <h2 id="h-2">定画风</h2>
+    <h3>人物</h3>
+    <p>准备了两版奶绿的像素图，最后选了 gpt 直接出的这一版当主图。它是「假像素」：看着像像素画，格子其实不整齐，所以后面每张新图都要统一颗粒（见第 3 步）。Chu 段的 A 拍直接用了之前在 ChatGPT 里跑的一张歪头图。</p>
+  </div>
+  <div class="col">
+    <div class="pair">
+      <figure><img src="制作流程_图/char_main.jpg" width="720" height="689" alt="奶绿主图：蓝紫长发、心形呆毛、白色羽翼发饰" loading="lazy"><figcaption>主图。之后每次出图都把它当「图 1」。</figcaption></figure>
+      <figure><img src="制作流程_图/char_tilt.jpg" width="720" height="689" alt="奶绿歪头无口图" loading="lazy"><figcaption>歪头图，用在 Chu 段 A 拍。</figcaption></figure>
+    </div>
+
+    <h3>配色</h3>
+    <p>原片是红色系。这次改成白底加两种绿，相邻两颗心颜色错开；心和白色按 1:1 棋盘格混在一起，远看是浅绿。</p>
+    <div class="swatches">
+      <div class="sw"><i style="background:var(--g1)"></i><span>G1<span class="mono">#46C35A</span></span></div>
+      <div class="sw"><i style="background:var(--g2)"></i><span>G2<span class="mono">#7DC95E</span></span></div>
+      <div class="sw"><i class="checker"></i><span>G1 + 白<span class="mono">1:1 棋盘格</span></span></div>
+      <div class="sw"><i class="checker two"></i><span>G2 + 白<span class="mono">1:1 棋盘格</span></span></div>
+    </div>
+
+    <h3>风格帧</h3>
+    <p>正式出图之前，先拼一张正面镜头的完整画面：人物、贴纸白边、绿心、歌词都放上去，确认整体感觉再往下做。画幅照原片 4:3。</p>
+    <figure><img src="制作流程_图/style_frame.jpg" width="1440" height="1080" alt="风格帧：正面奶绿，白底绿心，左右两块歌词" loading="lazy" style="border:1px solid var(--line)"><figcaption>风格帧。成片的正面镜头基本就是这张。</figcaption></figure>
+  </div>
+</section>
+
+<section class="wrap" aria-labelledby="h-3">
+  <div class="col">
+    <p class="step"><span>STEP 3</span></p>
+    <h2 id="h-3">设计动作，出图</h2>
+    <p>动作只要跟歌词搭得上就行，不照搬原片里男生的动作。奶绿是女孩子，原片那种捏领口的动作放到她身上很怪。整支片也只留了奶绿一个人：原本还有一个不露脸的第二角色，做到一半撤掉了，空出来的两个镜头换成了奶绿自己的呆毛特写和戳手指。</p>
+
+    <h3>提示词怎么写</h3>
+    <p>每个镜头一条英文提示词，结构都一样：</p>
+    <ol class="prompt">
+      <li><span><strong>参考图说明。</strong>图 1 是主图，人物和画风都照它。</span></li>
+      <li><span><strong>她是谁。</strong>蓝紫长发、心形呆毛、白色羽翼发饰、挑染，一条条写清楚，防止换脸。</span></li>
+      <li><span><strong>这个镜头。</strong>取景、动作、手放在哪。</span></li>
+      <li><span><strong>脸的规矩。</strong>无口：嘴是一条短线，眼神不变，不笑也不哭。</span></li>
+      <li><span><strong>画风规矩。</strong>像素格和图 1 一样粗，近景也不许变细；纯灰底（#E6E6E6），方便抠图。</span></li>
+    </ol>
+    <p class="note">进片那 9 张图的完整提示词在文件夹的「提示词」里。</p>
+
+    <h3>三张里挑一张</h3>
+    <p>每条提示词一般一次出 3 张，挑 1 张进片。</p>
+    <h3>统一颗粒</h3>
+    <p>gpt 每张图的「像素」大小都不太一样，一切镜头就看得出来。办法是按两眼间距把所有图缩放到同一个尺寸，再并排比颗粒，差太多的不用。成片里每张图的颗粒都在 5～7 px。</p>
+    <p>前后一共 6 批、48 张候选，进片 9 张，另外 1 张是自己之前跑的歪头图。</p>
+  </div>
+</section>
+
+<section class="wrap" aria-labelledby="h-4">
+  <div class="col">
+    <p class="step"><span>STEP 4</span></p>
+    <h2 id="h-4">小毛病用代码改，不整张重画</h2>
+    <p>整张重跑会把已经满意的地方也一起变掉。颜色、眨眼、呆毛弹跳这些小地方，要么写代码改，要么只让模型重画遮罩里的一小块。</p>
+
+    <div class="fixes">
+      <div class="fix">
+        <h3>chu 嘴改色</h3>
+        <p>只改嘴那 116 个像素的颜色，形状不动。前后改了 6 版（粉红、上浅下深、全粉……），最后定成和腮红一样的颜色。</p>
+        <div class="row">
+          <figure><img class="px" src="制作流程_图/mouth_before.png" width="308" height="320" alt="改色前，嘴是深棕红" loading="lazy" style="width:min(154px,42vw)"><figcaption>改前</figcaption></figure>
+          <figure><img class="px" src="制作流程_图/mouth_after.png" width="308" height="320" alt="改色后，嘴是腮红色" loading="lazy" style="width:min(154px,42vw)"><figcaption>改后 #EEA984</figcaption></figure>
+        </div>
+      </div>
+
+      <div class="fix">
+        <h3>闭眼帧</h3>
+        <p>做一张遮罩只盖住两只眼睛，让模型只重画这一块；出来以后再按像素贴回原图（像素画不能羽化），别的地方一个像素都不变。</p>
+        <div class="row">
+          <figure><img class="px" src="制作流程_图/eyes_open.png" width="662" height="296" alt="睁眼" loading="lazy" style="width:min(296px,86vw)"><figcaption>睁眼（主图）</figcaption></figure>
+          <figure><img class="px" src="制作流程_图/eyes_closed.png" width="662" height="296" alt="闭眼" loading="lazy" style="width:min(296px,86vw)"><figcaption>闭眼（只换了眼睛）</figcaption></figure>
+        </div>
+      </div>
+
+      <div class="fix">
+        <h3>呆毛弹跳</h3>
+        <p>把心形呆毛那一块以根部为支点竖着拉伸：原样、拉长 1.15 倍、压扁 0.94 倍、回弹 1.05 倍、再回原样。第 2 个镜头里踩着两拍各弹一次。</p>
+        <div class="row">
+          <figure><img class="px" src="制作流程_图/ahoge_1.00.png" width="290" height="300" alt="呆毛原样" loading="lazy" style="width:min(116px,19vw)"><figcaption>1.00</figcaption></figure>
+          <figure><img class="px" src="制作流程_图/ahoge_1.15.png" width="290" height="300" alt="呆毛拉长" loading="lazy" style="width:min(116px,19vw)"><figcaption>1.15</figcaption></figure>
+          <figure><img class="px" src="制作流程_图/ahoge_0.94.png" width="290" height="300" alt="呆毛压扁" loading="lazy" style="width:min(116px,19vw)"><figcaption>0.94</figcaption></figure>
+          <figure><img class="px" src="制作流程_图/ahoge_1.05.png" width="290" height="300" alt="呆毛回弹" loading="lazy" style="width:min(116px,19vw)"><figcaption>1.05</figcaption></figure>
+        </div>
+      </div>
+
+      <div class="fix">
+        <h3>害羞的腮红</h3>
+        <p>「なの!」那一下，腮红加深一档，再加上原片那种竖着的短线。</p>
+        <div class="row">
+          <figure><img class="px" src="制作流程_图/blush_before.png" width="349" height="152" alt="腮红原样" loading="lazy" style="width:min(262px,86vw)"><figcaption>原图</figcaption></figure>
+          <figure><img class="px" src="制作流程_图/blush_after.png" width="349" height="152" alt="腮红加深并加竖线" loading="lazy" style="width:min(262px,86vw)"><figcaption>加深 + 竖线</figcaption></figure>
+        </div>
+      </div>
+    </div>
+    <p class="dropped" style="margin-top:var(--s6)">试过又删掉的：汗滴和眼泪（加上反而多余）；整帧的棋盘格「点点」抖动（人物变平，发梢冒出杂色点，先不加）。</p>
+  </div>
+</section>
+
+<section class="wrap" aria-labelledby="h-5">
+  <div class="col">
+    <p class="step"><span>STEP 5</span></p>
+    <h2 id="h-5">一帧一帧合成</h2>
+    <p>615 帧全部用一个 Python 脚本画出来。每一帧按这个顺序叠：</p>
+    <ol class="pipe">
+      <li><div><p><strong>抠图，加贴纸边。</strong>去掉灰底，外面描一圈 16 px 白边和一条细黑线，原片就是这种贴纸感。</p></div></li>
+      <li><div><p><strong>摆位。</strong>按镜头表放进画面，以眼睛高度对齐。有三个镜头入场时人物先大一圈再回原大小（1.057、1.165、1.18 倍，都是量出来的）。</p></div></li>
+      <li><div>
+        <p><strong>镜头里的动。</strong>只在约 12 fps 的格点上动，每次整格平移。Chu 段每一拍，人物斜着小跳一下再落回，大字往画面外侧滑。正面和最后一个镜头，人物每拍往下沉 2 格，背景的绿心 15 帧一个循环，在 6 个位置之间跳。</p>
+        <figure class="motion">
+          <svg viewBox="0 0 330 190" role="img" aria-label="Chu 段 A 拍人物位置：第 0 帧在原点，第 2 帧右上 4 格，停到第 5 帧，第 7 帧回落到右 5 上 3，第 10 帧落到右 8 格原高度">
+            <g class="grid">
+              <line x1="40" y1="30" x2="40" y2="150"/><line x1="70" y1="30" x2="70" y2="150"/><line x1="100" y1="30" x2="100" y2="150"/><line x1="130" y1="30" x2="130" y2="150"/><line x1="160" y1="30" x2="160" y2="150"/><line x1="190" y1="30" x2="190" y2="150"/><line x1="220" y1="30" x2="220" y2="150"/><line x1="250" y1="30" x2="250" y2="150"/><line x1="280" y1="30" x2="280" y2="150"/><line x1="310" y1="30" x2="310" y2="150"/>
+              <line x1="40" y1="30" x2="310" y2="30"/><line x1="40" y1="60" x2="310" y2="60"/><line x1="40" y1="90" x2="310" y2="90"/><line x1="40" y1="120" x2="310" y2="120"/>
+            </g>
+            <line class="base" x1="40" y1="150" x2="310" y2="150"/>
+            <polyline class="path" points="40,150 160,30 190,60 280,150"/>
+            <rect class="dot" x="32" y="142" width="16" height="16"/>
+            <rect class="dot" x="152" y="22" width="16" height="16"/>
+            <rect class="dot" x="182" y="52" width="16" height="16"/>
+            <rect class="dot" x="272" y="142" width="16" height="16"/>
+            <text class="lbl" x="40" y="174" text-anchor="middle">f0</text>
+            <text class="lbl" x="160" y="16" text-anchor="middle">f2–f5</text>
+            <text class="lbl" x="204" y="80">f7</text>
+            <text class="lbl" x="280" y="174" text-anchor="middle">f10</text>
+            <text class="lbl" x="30" y="35" text-anchor="end">4</text>
+            <text class="lbl" x="30" y="155" text-anchor="end">0</text>
+          </svg>
+          <figcaption>Chu 段 A 拍一拍里人物的位置。一格 = 一个大像素（约 4.6 px），左边数字是升高了几格。第 2 帧跳上去，停住，第 7、10 帧分两步落下。</figcaption>
+        </figure>
+      </div></li>
+      <li><div><p><strong>心跳。</strong>Chu 段每拍切点那 2～3 帧，后面的白色大心放大 1.03 倍，人物一动就缩回去。</p></div></li>
+      <li><div>
+        <p><strong>转场。</strong>新镜头开头 2～3 帧做「洗白」。</p>
+        <div class="pair" style="margin-top:var(--s3)">
+          <figure><img class="px" src="制作流程_图/wash_wash.png" width="480" height="360" alt="洗白帧：画面发白，每隔一个大像素是白色" loading="lazy"><figcaption>第 165 帧，洗白</figcaption></figure>
+          <figure><img class="px" src="制作流程_图/wash_clean.png" width="480" height="360" alt="洗完后的正常画面" loading="lazy"><figcaption>第 168 帧，正常</figcaption></figure>
+        </div>
+      </div></li>
+      <li><div><p><strong>歌词。</strong>每一帧把我们的像素字缩放进原片同一句歌词的外框。这样原片字幕的动效（拉长再弹回、往中间靠、黑字变蓝）不用另外做，自动就有了。「!」下面那个点换成了小心心。</p></div></li>
+      <li><div><p><strong>眨眼。</strong>原片在哪几帧闭眼，我们就在同样的帧换上闭眼图，一共 29 帧。</p></div></li>
+      <li><div><p><strong>出片。</strong>615 帧拼成 30 fps 视频，原片音轨直接拷进去。整支片渲染一遍大约 1 分钟。</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<section class="wrap" aria-labelledby="h-6">
+  <div class="col">
+    <p class="step"><span>STEP 6</span></p>
+    <h2 id="h-6">从成片反着量一遍</h2>
+    <p>每出一版，都用量原片的同一套脚本去量成片，看对不对得上：</p>
+    <div class="checks">
+      <div><b>33 / 36</b><span>画面突变的帧和原片在同一帧。另外 3 个是洗白帧，我们的洗白淡一点，位置没错。</span></div>
+      <div><b>全部</b><span>Chu 段每拍里的每一小步，和原片同一帧。</span></div>
+      <div><b>29 / 29</b><span>眨眼帧和原片完全一致。</span></div>
+    </div>
+    <p>另外做了左右对照视频（左边原片，右边成片，同一条音轨），每改一版都逐段看一遍。</p>
+  </div>
+</section>
+
+<section class="wrap" aria-labelledby="h-7">
+  <div class="col">
+    <h2 id="h-7">改了哪几轮</h2>
+    <ul class="rounds">
+      <li><b>11-01 晚</b><span>选人物画法、配色、画幅；第 1 批出图（Chu 段）。</span></li>
+      <li><b>11-01 深夜</b><span>Chu 段两张定稿。</span></li>
+      <li><b>11-02</b><span>Chu 段的动作改成逐帧测量；嘴的颜色改了 6 版；补上背景大心的心跳。</span></li>
+      <li><b>11-02</b><span>第 2 批出图；动作重新设计，不照搬原片；第二个角色撤掉，补出图两轮。</span></li>
+      <li><b>11-02</b><span>整片灰模 v1 到 v6：修正 3 个晚 1 帧的切点，补特效和歌词动效，加闭眼帧，删汗滴，三个镜头人物放大 10%，开头起始位置上移 10%。</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="wrap" aria-labelledby="h-8">
+  <div class="col">
+    <h2 id="h-8">想自己做一支的话</h2>
+    <ol>
+      <li>先把原片逐帧拆开，量切点、像素大小、画面更新频率和每个动作。凭感觉做的动作，节奏一定不对。</li>
+      <li>正式出图前先拼一张风格帧。</li>
+      <li>每个镜头一张图，一次出 3 张挑 1 张，并把颗粒统一。</li>
+      <li>颜色、眨眼这种小毛病用代码或局部重画改，不整张重跑。</li>
+      <li>动画按测量出来的数字逐帧合成，最后从成片反着量一遍。</li>
+    </ol>
+  </div>
+</section>
+
+<section class="wrap" aria-labelledby="h-9">
+  <div class="col">
+    <h2 id="h-9">文件夹里有什么</h2>
+    <ul class="files">
+      <li><span>制作流程.html</span><span>这一页</span></li>
+      <li><span>成片/</span><span>奶绿版成片</span></li>
+      <li><span>素材/</span><span>成片里用到的所有图</span></li>
+      <li class="sub"><span>1_人物原图</span><span>主图（透明底、白底各一张）、歪头图</span></li>
+      <li class="sub"><span>2_镜头图（按出场顺序）</span><span>12 张，文件名带出场时间和歌词</span></li>
+      <li class="sub"><span>3_代码加工过的版本</span><span>嘴改色前的原图、呆毛弹跳三态、加深的腮红</span></li>
+      <li><span>提示词/</span><span>进片那 9 张图的完整提示词，和两张闭眼遮罩</span></li>
+      <li><span>代码/</span><span>测量、合成、特效脚本，和歌词逐帧外框数据</span></li>
+      <li><span>复刻_七海版/、复刻_星瞳版/</span><span>同一套流程换角色做的两版，结构同上：成片和对照、基底图、12 张镜头图、代码加工过的图、提示词、代码</span></li>
+      <li><span>制作流程_图/</span><span>这一页的插图</span></li>
+    </ul>
+    <p class="note">每条提示词一般一次出 3 张、挑 1 张，包里只放选定的图和它对应的提示词。成片用的是原曲音轨；原片画面和七海、星瞳的官方形象图没有收录。代码里的路径按原工程写死，直接运行要改路径（原片路径已换成占位），需要 Python（Pillow、NumPy、OpenCV）和 ffmpeg。</p>
+  </div>
+</section>
+
+<div class="lace alt" role="presentation"></div>
+<footer class="wrap">
+  <div class="col"><p>奶绿 Chu♡ 无口萌 · 出图 gpt-image · 拆片与合成 Claude Code</p></div>
+</footer>
